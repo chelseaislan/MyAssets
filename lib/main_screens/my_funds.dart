@@ -5,6 +5,8 @@ class MyFunds extends StatefulWidget {
   _MyFundsState createState() => _MyFundsState();
 }
 
+// Disini bakal ada detail pendanaan apa aja yg diambil
+// Kalo kosong kasih gambar
 class _MyFundsState extends State<MyFunds> {
   @override
   Widget build(BuildContext context) {

@@ -6,6 +6,7 @@ class MyAccount extends StatefulWidget {
   _MyAccountState createState() => _MyAccountState();
 }
 
+// Edit avatar, email, phone, info2 sama log out
 class _MyAccountState extends State<MyAccount> {
   @override
   Widget build(BuildContext context) {
