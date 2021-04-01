@@ -9,6 +9,7 @@ class LoginPage extends StatefulWidget {
   _LoginPageState createState() => _LoginPageState();
 }
 
+// Email sama password
 class _LoginPageState extends State<LoginPage> {
   TextEditingController controller = TextEditingController();
   @override

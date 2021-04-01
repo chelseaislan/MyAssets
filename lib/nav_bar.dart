@@ -28,7 +28,7 @@ class _NavBarState extends State<NavBar> {
 
   // Disini cuma perlu bottom navigation bar,
   // gak perlu ada appbar sama yang lain-lain
-  // body nya cuma buat manggil index
+  // body nya cuma buat manggil index, jadi sistemnya kayak fragment
   @override
   Widget build(BuildContext context) {
     return Scaffold(

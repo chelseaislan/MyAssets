@@ -8,6 +8,7 @@ class SignupPage extends StatefulWidget {
   _SignupPageState createState() => _SignupPageState();
 }
 
+// Email, phone, password sama reff code kalo ada
 class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
