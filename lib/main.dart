@@ -10,6 +10,8 @@ class MyAssetsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // Return ke class name
+      // Mulai ke splash kalo masih guest, kalo udah login
+      // langsung ke navigation
       home: SplashScreen(
       ),
     );

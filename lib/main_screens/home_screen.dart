@@ -5,6 +5,8 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
+// Disini bakal ada pilihan pendanaan dari 15 hari ke 1 tahun
+// 15 1 2 3 6 12
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
