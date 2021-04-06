@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_myassets/splash.dart';
+import 'package:flutter_myassets/onboarding/splash.dart';
 
 class MyAccount extends StatefulWidget {
   @override
@@ -49,13 +49,13 @@ class _MyAccountState extends State<MyAccount> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _accountCardContents(
+                            accountCardContents(
                                 Icons.confirmation_num_rounded, "My Coupons"),
-                            _accountCardContents(
+                            accountCardContents(
                                 Icons.note_add_rounded, "My Tasks"),
-                            _accountCardContents(
+                            accountCardContents(
                                 Icons.money_rounded, "My Privileges"),
-                            _accountCardContents(Icons.person_pin_rounded,
+                            accountCardContents(Icons.person_pin_rounded,
                                 "My Relationship Manager"),
                           ],
                         ),
@@ -72,16 +72,16 @@ class _MyAccountState extends State<MyAccount> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _accountCardContents(
+                            accountCardContents(
                                 Icons.edit_rounded, "Edit Profile"),
-                            _accountCardContents(
+                            accountCardContents(
                                 Icons.settings_rounded, "Account Settings"),
-                            _accountCardContents(
+                            accountCardContents(
                                 Icons.format_list_numbered_rounded,
                                 "My Referral Code"),
-                            _accountCardContents(
+                            accountCardContents(
                                 Icons.call_rounded, "CS & FAQ"),
-                            _accountCardContents(
+                            accountCardContents(
                                 Icons.info_outline_rounded, "About MyAssets"),
                             GestureDetector(
                                 onTap: () {
@@ -90,7 +90,7 @@ class _MyAccountState extends State<MyAccount> {
                                     return SplashScreen();
                                   }));
                                 },
-                                child: _accountCardContents(
+                                child: accountCardContents(
                                     Icons.logout, "Log Out")),
                           ],
                         ),
@@ -104,7 +104,7 @@ class _MyAccountState extends State<MyAccount> {
         ));
   }
 
-  Container _accountCardContents(icon, text) => Container(
+  Container accountCardContents(icon, text) => Container(
         margin: EdgeInsets.only(top: 5),
         child: Container(
           margin: EdgeInsets.only(bottom: 15),

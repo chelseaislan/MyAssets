@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_myassets/login_page.dart';
+import 'package:flutter_myassets/onboarding/login_page.dart';
 
 // Gimana caranya biar bisa langsung ke next page
 // tanpa perlu bikin button

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_myassets/server_side/product_detail.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -28,12 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Container(
                       margin: EdgeInsets.fromLTRB(5, 10, 5, 10),
                       child: Image(image: AssetImage("images/banner.png"))),
-                  homeLendingCard("12 Bulan", "24.0", "3298"),
-                  homeLendingCard("6 Bulan", "19.0", "9573"),
-                  homeLendingCard("3 Bulan", "17.5", "7492"),
-                  homeLendingCard("2 Bulan", "17.0", "5542"),
-                  homeLendingCard("1 Bulan", "16.0", "6896"),
-                  homeLendingCard("15 Hari", "15.0", "10384"),
+                  homeLendingContainer("12", "22.0", "3298"),
+                  homeLendingContainer("6", "19.0", "9573"),
+                  homeLendingContainer("3", "17.5", "7492"),
+                  homeLendingContainer("2", "17.0", "5542"),
+                  homeLendingContainer("1", "16.0", "6896"),
                 ],
               )
             ],
@@ -41,19 +41,19 @@ class _HomeScreenState extends State<HomeScreen> {
         ));
   }
 
-  Container homeLendingCard(tenor, rate, order) => Container(
-        margin: EdgeInsets.symmetric(vertical: 2),
+  Container homeLendingContainer(tenor, rate, order) => Container(
+        margin: EdgeInsets.symmetric(vertical: 3),
         child: Card(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           child: Container(
-            margin: EdgeInsets.fromLTRB(15, 10, 15, 10),
+            margin: EdgeInsets.all(15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  "Pendanaan $tenor",
-                  style: TextStyle(fontWeight: FontWeight.w600),
+                  "Pendanaan $tenor Bulan",
+                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       "$rate%",
                       style: TextStyle(
-                          fontSize: 28,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: Colors.orange[700]),
                     ),
@@ -70,13 +70,18 @@ class _HomeScreenState extends State<HomeScreen> {
                             primary: Colors.orange[700],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20))),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return ProductDetail();
+                          }));
+                        },
                         child: Text("Fund"))
                   ],
                 ),
                 Text(
                   "$order Pesanan Dibayar",
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: 13),
                 ),
               ],
             ),

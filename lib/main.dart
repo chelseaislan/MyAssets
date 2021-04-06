@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'splash.dart';
+import 'onboarding/splash.dart';
 
 void main() {
   runApp(MyAssetsApp());

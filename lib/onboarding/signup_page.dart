@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_myassets/nav_bar.dart';
-import 'package:flutter_myassets/login_page.dart';
+import 'package:flutter_myassets/onboarding/login_page.dart';
 
 class SignupPage extends StatefulWidget {
   @override

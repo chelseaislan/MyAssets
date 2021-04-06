@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_myassets/forgot_password.dart';
+import 'package:flutter_myassets/onboarding/forgot_password.dart';
 import 'package:flutter_myassets/nav_bar.dart';
-import 'package:flutter_myassets/signup_page.dart';
+import 'package:flutter_myassets/onboarding/signup_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
