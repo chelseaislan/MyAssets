@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Text(
                         "Welcome back!",
                         style: TextStyle(
-                            fontSize: 20.0, fontWeight: FontWeight.w600),
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
                       ),
                     ),
                     Container(
@@ -71,6 +71,25 @@ class _LoginPageState extends State<LoginPage> {
                       margin: EdgeInsets.only(bottom: 20),
                       child: Column(
                         children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width,
+                            child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.pushReplacement(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return NavBar();
+                                  }));
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.orange[700],
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20))),
+                                child: Text(
+                                  "LOG IN",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                )),
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -81,28 +100,19 @@ class _LoginPageState extends State<LoginPage> {
                                       return SignupPage();
                                     }));
                                   },
-                                  child: Text("Create a new account",
+                                  child: Text("Sign Up",
                                       style: TextStyle(color: Colors.black))),
                               TextButton(
                                   onPressed: () {
-                                    Navigator.pushReplacement(context,
+                                    Navigator.push(context,
                                         MaterialPageRoute(builder: (context) {
-                                      return NavBar();
+                                      return ForgotPassword();
                                     }));
                                   },
-                                  child: Text("LOG IN",
+                                  child: Text("Reset Password",
                                       style: TextStyle(color: Colors.black))),
                             ],
                           ),
-                          TextButton(
-                              onPressed: () {
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) {
-                                  return ForgotPassword();
-                                }));
-                              },
-                              child: Text("Forgot your password?",
-                                  style: TextStyle(color: Colors.black))),
                         ],
                       ),
                     ),

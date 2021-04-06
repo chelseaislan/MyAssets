@@ -47,7 +47,7 @@ class _SignupPageState extends State<SignupPage> {
                       child: Text(
                         "Hello there!",
                         style: TextStyle(
-                            fontSize: 20.0, fontWeight: FontWeight.w600),
+                            fontSize: 20.0, fontWeight: FontWeight.bold),
                       ),
                     ),
                     Container(
@@ -83,9 +83,27 @@ class _SignupPageState extends State<SignupPage> {
                         )),
                     Container(
                       margin: EdgeInsets.only(bottom: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      child: Column(
                         children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width,
+                            child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.pushReplacement(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return NavBar();
+                                  }));
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.orange[700],
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(20))),
+                                child: Text(
+                                  "SIGN UP",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                )),
+                          ),
                           TextButton(
                               onPressed: () {
                                 Navigator.pushReplacement(context,
@@ -93,16 +111,7 @@ class _SignupPageState extends State<SignupPage> {
                                   return LoginPage();
                                 }));
                               },
-                              child: Text("Have an account?",
-                                  style: TextStyle(color: Colors.black))),
-                          TextButton(
-                              onPressed: () {
-                                Navigator.pushReplacement(context,
-                                    MaterialPageRoute(builder: (context) {
-                                  return NavBar();
-                                }));
-                              },
-                              child: Text("SIGN UP",
+                              child: Text("Already have an account?",
                                   style: TextStyle(color: Colors.black))),
                         ],
                       ),

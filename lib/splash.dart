@@ -25,7 +25,7 @@ class SplashScreen extends StatelessWidget {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       elevation: 1.0,
-                      primary: Colors.amber[800],
+                      primary: Colors.orange[700],
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       )),
@@ -35,7 +35,10 @@ class SplashScreen extends StatelessWidget {
                       return LoginPage();
                     }));
                   },
-                  child: Text("Continue")),
+                  child: Text(
+                    "Continue",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
             )
           ],
         )),
