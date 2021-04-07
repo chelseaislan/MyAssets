@@ -73,6 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width,
+                            height: 45,
                             child: ElevatedButton(
                                 onPressed: () {
                                   Navigator.pushReplacement(context,

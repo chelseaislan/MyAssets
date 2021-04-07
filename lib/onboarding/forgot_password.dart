@@ -18,7 +18,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_back_ios_rounded),
+            icon: Icon(Icons.arrow_back_rounded),
             color: Colors.black,
           ),
           title: Image.asset(

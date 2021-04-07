@@ -67,7 +67,7 @@ class _MyFundsState extends State<MyFunds> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.fromLTRB(0, 10, 0, 5),
+                    margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
                     child: Text(
                       "Pendanaan $tenorAsset Bulan",
                       style:
@@ -95,7 +95,7 @@ class _MyFundsState extends State<MyFunds> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 10),
+                    margin: EdgeInsets.only(bottom: 15),
                     child: Text(
                       "Matured in $remainingDays days",
                       style: TextStyle(fontSize: 14, color: Colors.grey[600]),

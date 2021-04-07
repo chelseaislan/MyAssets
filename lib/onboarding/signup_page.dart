@@ -87,6 +87,7 @@ class _SignupPageState extends State<SignupPage> {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width,
+                            height: 45,
                             child: ElevatedButton(
                                 onPressed: () {
                                   Navigator.pushReplacement(context,

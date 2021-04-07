@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_myassets/server_side/start_lending.dart';
 
 class ProductDetail extends StatefulWidget {
   @override
@@ -57,13 +58,21 @@ class _ProductDetailState extends State<ProductDetail> {
                 height: 45,
                 margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return StartLending();
+                      }));
+                    },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.orange[700],
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30)),
                     ),
-                    child: Text("Start Lending")),
+                    child: Text(
+                      "Start Lending",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    )),
               )
             ],
           ),

@@ -79,8 +79,7 @@ class _MyAccountState extends State<MyAccount> {
                             accountCardContents(
                                 Icons.format_list_numbered_rounded,
                                 "My Referral Code"),
-                            accountCardContents(
-                                Icons.call_rounded, "CS & FAQ"),
+                            accountCardContents(Icons.call_rounded, "CS & FAQ"),
                             accountCardContents(
                                 Icons.info_outline_rounded, "About MyAssets"),
                             GestureDetector(
@@ -105,9 +104,9 @@ class _MyAccountState extends State<MyAccount> {
   }
 
   Container accountCardContents(icon, text) => Container(
-        margin: EdgeInsets.only(top: 5),
+        margin: EdgeInsets.only(top: 10),
         child: Container(
-          margin: EdgeInsets.only(bottom: 15),
+          margin: EdgeInsets.only(bottom: 20),
           child: Row(
             children: [
               Icon(
