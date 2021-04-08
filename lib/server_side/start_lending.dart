@@ -61,7 +61,7 @@ class _StartLendingState extends State<StartLending> {
                     width: MediaQuery.of(context).size.width,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
+                        Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
                           return VATransfer();
                         }));

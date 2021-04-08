@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_myassets/server_side/lending_detail.dart';
 
 class MyFunds extends StatefulWidget {
   @override
@@ -40,7 +41,15 @@ class _MyFundsState extends State<MyFunds> {
                 margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
                 child: Column(
                   children: [
-                    activeLendingContainer("12", "3.243.000", "3.000", "102"),
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return LendingDetail();
+                          }));
+                        },
+                        child: activeLendingContainer(
+                            "12", "3.243.000", "3.000", "102")),
                     activeLendingContainer("12", "3.243.000", "3.000", "102"),
                     activeLendingContainer("12", "3.243.000", "3.000", "102"),
                     activeLendingContainer("12", "3.243.000", "3.000", "102"),
