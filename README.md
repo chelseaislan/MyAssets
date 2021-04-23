@@ -1,4 +1,4 @@
-# flutter_myassets
+# MyAssets
 
 A new Flutter project.
 
